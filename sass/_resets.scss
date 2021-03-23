@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 10px */
+
+    @include screen(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include screen(tab-port) {
+        font-size: 50%;
+    }
+
+    @include screen(big-screen) {
+        font-size: 75%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    background: linear-gradient(to right, rgba(#ebfbff, 0.6), rgba(#ebfbff, 0.6)), url(/images/bg-hero-desktop.svg);
+
+    @include screen(phone) {
+        background: linear-gradient(to right, rgba(#ebfbff, 0.8), rgba(#ebfbff, 0.5)), url(/images/bg-hero-mobile.svg);
+    }
+}
+
+.btn {
+    padding: .7rem 3rem;
+    border-radius: 5rem;
+    border: none;
+    box-shadow: .1rem .1rem .3rem .05rem rgba(#000, .1);
+    text-align: center;
+}

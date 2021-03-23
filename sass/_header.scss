@@ -1,0 +1,153 @@
+.header {
+    width: 85%;
+    height: 90vh;
+    margin: 0 auto 10rem;
+    font-family: $font-fam-2;
+    font-weight: $font-weight-2;
+
+    @include screen(tab-port) {
+        height: 70vh;
+    }
+
+    @include screen(phone) {
+        width: 90%;
+        height: 117vh;
+    }
+
+
+    &__box-1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 3.2rem 0;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 16rem;
+
+        @include screen(phone) {
+            width: 13rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    
+
+    &__box-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3.2rem 0 0;
+
+        @include screen(phone) {
+            flex-direction: column;
+            width: 85%; 
+            margin: 9rem auto 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: $primary-color-dark;
+
+            @include screen(tab-port) {
+                font-size: 3.2rem;
+                font-weight: $font-weight-3;
+            }
+
+            @include screen(phone) {
+                font-size: 3rem;
+                font-weight: $font-weight-3;
+            }
+        }
+
+        p {
+            font-family: $font-fam-1;
+            font-weight: $font-weight-1;
+            font-size: 1.5rem;
+            margin: 2.4rem 0 4.3rem;
+            color: $primary-color-dark;
+
+            @include screen(tab-port) {
+                font-size: 1.8rem;
+            }
+
+            @include screen(phone) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__texts {
+        width: 40%;
+
+        @include screen(phone) {
+            width: 100%;
+            margin: 0 0 8rem;
+            text-align: center;
+        }
+    }
+
+    &__mockup {
+        width: 55%;
+
+        @include screen(phone) {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.btn-1 {
+    font-weight: $font-weight-2;
+    background: #fff;
+    font-size: 1.2rem;
+    padding: 1.2rem 5rem;
+    outline: none;
+    cursor: pointer;
+    
+    &:link,
+    &:visited {
+        color: $primary-color-dark;
+    }
+
+    &:active {
+        color: rgba(#000, .5);
+        background-color: rgba( #fff, .5);
+      }
+
+    @include screen(phone) {
+        font-size: 1.5rem;
+        padding: .85rem 3rem;
+    }
+}
+
+.btn-2 {
+    font-weight: $font-weight-2;
+    font-family: $font-fam-1;
+    font-size: 1.28rem;
+    padding: 1.6rem 5rem !important;
+    background: $secondary-color-1;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:link,
+    &:visited {
+        color: #fff;
+    }
+
+    &:active {
+        color: #fff;
+        background-color: rgba( $secondary-color-1, .5);
+      }
+
+    @include screen(phone) {
+        padding: 2rem 9rem !important;
+    }
+}
+

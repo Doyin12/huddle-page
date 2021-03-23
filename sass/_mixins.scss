@@ -1,0 +1,33 @@
+// media query manager 
+
+/* 
+0 - 600px phone
+600 - 900 tab port 
+900 - 1200 tab land
+1200- 1800 mnormal style applied
+1800px - bigger screen 
+
+
+breakpoint arguement
+
+- phone 
+- tab-port
+- tab-land
+- big-screen
+*/
+
+@mixin screen($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content};  /*600px*/
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {@content};  /*900px*/
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {@content};  /*1200px*/
+    }
+    @if $breakpoint == big-screen {
+        @media (min-width: 112.5em) {@content};  /*1800px*/
+    }
+}
+

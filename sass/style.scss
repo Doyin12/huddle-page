@@ -1,0 +1,10 @@
+@import './variables';
+@import './mixins';
+@import './resets';
+@import './header';
+@import './body';
+@import './footer';
+
+::selection {
+    color: $secondary-color-1;
+}

@@ -1,0 +1,242 @@
+.footer {
+  background: $primary-color-dark;
+  color: #fff;
+  margin: 22rem 0 0;
+  border: none;
+  font-family: $font-fam-1;
+  font-weight: $font-weight-1;
+
+  position: relative;
+
+  @include screen(phone) {
+    margin: 35rem 0 0;
+  }
+
+  &__head {
+    text-align: center;
+    background-color: #fff;
+    padding: 5.4rem 8rem 4.8rem;
+    box-shadow: .1rem .1rem .3rem .3rem rgba(#000, .05);
+    border-radius: 1.6rem;
+
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include screen(tab-land) {
+      width: 60%;
+    }
+
+    @include screen(tab-port) {
+     padding: 3rem 6rem 2.8rem;
+
+     width: 60%;
+    }
+
+    @include screen(phone) {
+      width: 90%;
+      padding: 6rem 6rem 7rem;
+      top: -5%;
+    }
+
+    h1 {
+      color: $primary-color-dark;
+      font-family: $font-fam-2;
+      margin-bottom: 3.2rem;
+      font-size: 2.9rem;
+    }
+  }
+
+  &__logo-box {
+    width: 75%;
+    margin: 16rem auto 3.3rem;
+
+    @include screen(tab-port) {
+      width: 90%;
+    }
+  }
+
+  &__logo {
+    width: 25rem;
+
+    @include screen(phone) {
+      width: 20rem;
+    } 
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text-social-box {
+    display: flex;
+    justify-content: space-between;
+
+    width: 75%;
+    margin: 0 auto;
+    
+    opacity: 80%;
+
+    @include screen(tab-port) {
+      width: 90%;
+    }
+
+    @include screen(phone) {
+      flex-direction: column;
+      opacity: unset;
+    }
+  }
+
+  &__text-box {
+    width: 40ch;
+
+    font-size: 1.5rem;
+
+    @include screen(phone) {
+      width: unset;
+      font-size: 2rem;
+    }
+
+  }
+
+  &__faq-box {
+    font-size: 1.5rem;
+
+    @include screen(phone) {
+      font-size: 2.3rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__contact-box {
+    font-size: 1.5rem;
+
+    @include screen(phone) {
+      font-size: 2.3rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__social-box {
+
+    @include screen(phone) {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    i {
+      border: solid .1rem #fff;
+      padding: .7rem;
+      border-radius: 100%;
+      margin-right: .6rem;
+      font-size: 1.4rem;
+      color: #fff;
+
+      @include screen(phone) {
+        font-size: 2.3rem;
+        padding: 1rem;
+      }
+
+      &:active {
+        color: $secondary-color-1;
+        border: solid .1rem $secondary-color-1;
+      }
+    }
+
+    &:link,
+    &:visited {
+      color: #fff;
+    }
+    
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+.lg-btn {
+  border-radius: 3.2rem;
+  padding: 2.2rem 7rem;
+  outline: none;
+  font-size: 1.8rem;
+  border: none;
+  background: $secondary-color-1;
+  cursor: pointer;
+  color: #fff;
+  font-family: $font-fam-1;
+  font-weight: $font-weight-3;
+
+  box-shadow: .4rem .5rem 1rem rgba(#000, .3);
+
+  
+  @include screen(tab-port) {
+    font-size: 1.3rem;
+    padding: 1.8rem 7rem;
+  }
+
+  &:link,
+  &:visited
+   {
+        color: #fff;
+    }
+
+  &:active {
+    color: #fff;
+    background-color: rgba( $secondary-color-1, .5);
+  }
+}
+
+.location,
+.phone,
+.email {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3rem;
+
+  margin-bottom: 1.3rem;
+  line-height: 2rem;
+
+  @include screen(phone) {
+    gap: 3rem;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.copyright {
+  text-align: right;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+
+  margin: 1.8rem 0 1rem;
+
+  @include screen(phone) {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    margin: 2.5rem 0 1rem;
+  }
+}
+
+
+
+
+
+
+.attribution {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
